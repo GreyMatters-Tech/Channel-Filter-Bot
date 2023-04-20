@@ -11,4 +11,5 @@ googletrans==3.1.0a0
 requests
 gtts
 psutil
-
+Flask==2.2.2
+gunicorn==20.1.0
