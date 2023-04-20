@@ -2,7 +2,7 @@ pyrogram
 tgcrypto
 motor[srv] 
 cinemagoer
-aiohttp
+aiohttp==3.8.2
 aiofiles
 asyncio
 Pillow
