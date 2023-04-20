@@ -19,6 +19,4 @@ connections - Get connected channels list
 
 [CyniteOfficial](https://github.com/cyniteofficial) - Developer
 
-[@CyniteBackup](https://www.telegram.dog/CyniteBackup) - Updates Channel
-
 [@GreyMatter_Bots](https://www.telegram.dog/GreyMatter_Bots) - Me For Promoting This Open Source Project.
