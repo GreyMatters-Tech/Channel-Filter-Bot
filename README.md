@@ -17,7 +17,7 @@ connections - Get connected channels list
 
 #### Credits :-
 
-[@CyniteOfficial](https://www.telegram.dog/CyniteOfficial) - Developer
+[CyniteOfficial](https://github.com/cyniteofficial) - Developer
 
 [@CyniteBackup](https://www.telegram.dog/CyniteBackup) - Updates Channel
 
