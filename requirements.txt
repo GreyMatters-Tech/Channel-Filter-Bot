@@ -1,0 +1,14 @@
+pyrogram
+tgcrypto
+motor[srv] 
+cinemagoer
+aiohttp
+aiofiles
+asyncio
+Pillow
+speedtest
+googletrans==3.1.0a0
+requests
+gtts
+psutil
+
