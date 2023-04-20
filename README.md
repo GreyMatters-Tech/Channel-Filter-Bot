@@ -15,7 +15,7 @@ fsub - Add a Force Subscribe Channel
 connections - Get connected channels list
 ```
 
-Credits :-
+#### Credits :-
 
 [@CyniteOfficial](https://www.telegram.dog/CyniteOfficial) - Developer
 
