@@ -1,4 +1,5 @@
 # Channel-Filter-Bot
+Sample Bot - [@YourFindBot](https://www.telegram.dog/YourFindBot)
 
 ## How to Use & Deploy This Bot
 Watch Tutorial - [Tutorial Video]()
