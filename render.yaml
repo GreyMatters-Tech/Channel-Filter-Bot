@@ -15,7 +15,7 @@ services:
         sync: false
       - key: API_HASH
         sync: false
-      - key: CHANNELS
+      - key: CHANNEL
         sync: false
       - key: ADMINS
         sync: false
