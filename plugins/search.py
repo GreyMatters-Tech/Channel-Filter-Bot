@@ -17,7 +17,7 @@ async def search(bot, message):
     if message.text.startswith("/"):
        return    
     query   = message.text 
-    head    = "<u>Here is the results 👇\n\nPromoted By </u> <b><I>@GreyMatter_Bots</I></b>\n\n"
+    head    = "<u>Here is the results 👇\n\nPromoted By </u> <b><I>@movies_villa_backup</I></b>\n\n"
     results = ""
     try:
        for channel in channels:
@@ -31,7 +31,7 @@ async def search(bot, message):
           buttons = []
           for movie in movies: 
               buttons.append([InlineKeyboardButton(movie['title'], callback_data=f"recheck_{movie['id']}")])
-          msg = await message.reply_photo(photo="https://telegra.ph/file/cf6706158b0bfaf436f54.jpg",
+          msg = await message.reply_photo(photo="https://telegra.ph/file/71a38d9a8f3bc6cab4a88.jpg",
                                           caption="<b><I>I Couldn't find anything related to Your Query😕.\nDid you mean any of these?</I></b>", 
                                           reply_markup=InlineKeyboardMarkup(buttons))
        else:
@@ -57,7 +57,7 @@ async def recheck(bot, update):
     id      = update.data.split("_")[-1]
     query   = await search_imdb(id)
     channels = (await get_group(update.message.chat.id))["channels"]
-    head    = "<u>I Have Searched Movie With Wrong Spelling But Take care next time 👇\n\nPromoted By </u> <b><I>@GreyMatter_Bots</I></b>\n\n"
+    head    = "<u>I Have Searched Movie With Wrong Spelling But Take care next time 👇\n\nPromoted By </u> <b><I>@movies_villa_backup</I></b>\n\n"
     results = ""
     try:
        for channel in channels:
