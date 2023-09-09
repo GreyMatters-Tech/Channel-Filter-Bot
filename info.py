@@ -1,8 +1,8 @@
-API_ID       = 
-API_HASH     = ""
-BOT_TOKEN    = ""
-SESSION      = ""
-DATABASE_URI = ""
-LOG_CHANNEL  = -1001884373226
-ADMIN        = 1350642629
-CHANNEL      = "@GreyMatter_Bots"
+API_ID       = 25830285
+API_HASH     = "0cbcabbf1b9c56a4dfc4b8950d584a2a"
+BOT_TOKEN    = "6320242599:AAEMKBv62_VwXP-Fn1fOOlVAM3KqIT6ni_w"
+SESSION      = "BQGKI40AqESk352y2i9AXgTqLRNm_quKJVr9Iay1WncvE8GMjeDf3UOdQ3gtwHlly8Rd-k1F86NhTvZkqfJHXv9wxI3eEyA_3e5Cb-CI5RIzMKISXforDDhj_dlkEfSdU2SINiWQxBrNv2Xgy0w96Qej5C_Ds3QHMWMaZGmpGI2jyDMpkYBuBbYCEsLBUmWIIX_ckZDMLOcehg3Ajpq1kp0q2q2U49o09FXac6FapV46kEa29Pyj8GTuOWKPV0VZ9-mDSGwDvPGN7gWEpiy4ESOzKqKOL2HwbqacWzQmq_UJzvvEEVCGPYGHV4jZNnXsSEAYkt4zm590sooAedg1XXnYRtSlBAAAAAFrQhqtAA"
+DATABASE_URI = "mongodb+srv://Searchbot:Mongodb.bot@cluster0.5xixyjh.mongodb.net/?retryWrites=true&w=majority"
+LOG_CHANNEL  = -1001961336094
+ADMIN        = 6651109872
+CHANNEL      = "@movies_villa_backup"
