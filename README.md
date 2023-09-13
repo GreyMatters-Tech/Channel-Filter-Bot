@@ -17,6 +17,8 @@ connections - Get connected channels list
 
 #### Credits :-
 
+## Deploy 
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ROYAL-JATT/Channel-Post-Filter-Bot)
 
 
