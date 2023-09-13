@@ -19,7 +19,7 @@ connections - Get connected channels list
 
 ## Deploy 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ROYAL-JATT/Channel-Post-Filter-Bot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ROYAL-JATT/Channel-Filter-Bot)
 
 
 [CyniteOfficial](https://github.com/cyniteofficial) - Developer
