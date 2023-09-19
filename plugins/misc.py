@@ -7,7 +7,7 @@ async def start(bot, message):
     await add_user(message.from_user.id, message.from_user.first_name)
     await message.reply(text=script.START.format(message.from_user.mention),
                         disable_web_page_preview=True,
-                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/yourfindbot?startgroup=true')
+                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'MOVIES_VILLA_POST_FIND_BOT?startgroup=true')
             ],[InlineKeyboardButton("ʜᴇʟᴘ", callback_data="misc_help"),
                                                             InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="misc_about")]]))  
 @Client.on_message(filters.command("help"))
