@@ -17,7 +17,7 @@ async def search(bot, message):
     if message.text.startswith("/"):
        return    
     query   = message.text 
-    head    = "<u>Here is the results 👇\n\nPromoted By </u> <b><I>@movies_villa_backup</I></b>\n\n"
+    head    = "<u>Hᴇʀᴇ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛs 👇\n\nPʀᴏᴍᴏᴛᴇᴅ Bʏ </u> <b><I>@movies_villa_backup</I></b>\n\n"
     results = ""
     try:
        for channel in channels:
@@ -32,7 +32,7 @@ async def search(bot, message):
           for movie in movies: 
               buttons.append([InlineKeyboardButton(movie['title'], callback_data=f"recheck_{movie['id']}")])
           msg = await message.reply_photo(photo="https://telegra.ph/file/71a38d9a8f3bc6cab4a88.jpg",
-                                          caption="<b><I>I Couldn't find anything related to Your Query😕.\nDid you mean any of these?</I></b>", 
+                                          caption="<b><I>I Cᴏᴜʟᴅɴ'ᴛ ғɪɴᴅ ᴀɴʏᴛʜɪɴɢ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ Yᴏᴜʀ Qᴜᴇʀʏ😕.\nDɪᴅ ʏᴏᴜ ᴍᴇᴀɴ ᴀɴʏ ᴏғ ᴛʜᴇsᴇ?</I></b>", 
                                           reply_markup=InlineKeyboardMarkup(buttons))
        else:
           msg = await message.reply_text(text=head+results, disable_web_page_preview=True)
@@ -51,13 +51,13 @@ async def recheck(bot, update):
     except:
        return await update.message.delete(2)       
     if clicked != typed:
-       return await update.answer("That's not for you! 👀", show_alert=True)
+       return await update.answer("Tʜᴀᴛ's ɴᴏᴛ ғᴏʀ ʏᴏᴜ! 👀", show_alert=True)
 
-    m=await update.message.edit("Searching..💥")
+    m=await update.message.edit("Sᴇᴀʀᴄʜɪɴɢ..💥")
     id      = update.data.split("_")[-1]
     query   = await search_imdb(id)
     channels = (await get_group(update.message.chat.id))["channels"]
-    head    = "<u>I Have Searched Movie With Wrong Spelling But Take care next time 👇\n\nPromoted By </u> <b><I>@movies_villa_backup</I></b>\n\n"
+    head    = "<u>I Hᴀᴠᴇ Sᴇᴀʀᴄʜᴇᴅ Mᴏᴠɪᴇ Wɪᴛʜ Wʀᴏɴɢ Sᴘᴇʟʟɪɴɢ Bᴜᴛ Tᴀᴋᴇ ᴄᴀʀᴇ ɴᴇxᴛ ᴛɪᴍᴇ 👇\n\nPʀᴏᴍᴏᴛᴇᴅ Bʏ </u> <b><I>@movies_villa_backup</I></b>\n\n"
     results = ""
     try:
        for channel in channels:
@@ -67,7 +67,7 @@ async def recheck(bot, update):
                   continue 
                results += f"<b><I>♻️🍿 {name}</I></b>\n\n🔗 {msg.link}</I></b>\n\n"
        if bool(results)==False:          
-          return await update.message.edit("Still no results found! Please Request To Group Admin", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎯 Request To Admin 🎯", callback_data=f"request_{id}")]]))
+          return await update.message.edit("Sᴛɪʟʟ ɴᴏ ʀᴇsᴜʟᴛs ғᴏᴜɴᴅ! Pʟᴇᴀsᴇ Rᴇǫᴜᴇsᴛ Tᴏ Gʀᴏᴜᴘ Aᴅᴍɪɴ", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎯 Rᴇǫᴜᴇsᴛ Tᴏ Aᴅᴍɪɴ 🎯", callback_data=f"request_{id}")]]))
        await update.message.edit(text=head+results, disable_web_page_preview=True)
     except Exception as e:
        await update.message.edit(f"❌ Error: `{e}`")
@@ -81,7 +81,7 @@ async def request(bot, update):
     except:
        return await update.message.delete()       
     if clicked != typed:
-       return await update.answer("That's not for you! 👀", show_alert=True)
+       return await update.answer("Tʜᴀᴛ's ɴᴏᴛ ғᴏʀ ʏᴏᴜ! 👀", show_alert=True)
 
     admin = (await get_group(update.message.chat.id))["user_id"]
     id    = update.data.split("_")[1]
