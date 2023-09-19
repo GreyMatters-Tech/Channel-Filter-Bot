@@ -14,23 +14,23 @@ async def f_sub_cmd(bot, message):
     except :
        return await bot.leave_chat(message.chat.id)  
     if message.from_user.id!=user_id:
-       return await m.edit(f"Only {user_name} can use this command 😁")
+       return await m.edit(f"Only {user_name} ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ 😁")
     if bool(verified)==False:
-       return await m.edit("This chat is not verified!\nuse /verify")    
+       return await m.edit("Tʜɪs ᴄʜᴀᴛ ɪs ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ!\nUsᴇ /verify")    
     try:
        f_sub = int(message.command[-1])
     except:
-       return await m.edit("❌ Incorrect format!\nUse `/fsub ChannelID`")       
+       return await m.edit("❌ Iɴᴄᴏʀʀᴇᴄᴛ ғᴏʀᴍᴀᴛ!\nUsᴇ `/fsub Cʜᴀɴɴᴇʟ ID`")       
     try:
        chat   = await bot.get_chat(f_sub)
        group  = await bot.get_chat(message.chat.id)
        c_link = chat.invite_link
        g_link = group.invite_link       
     except Exception as e:
-       text = f"❌ Error: `{str(e)}`\n\nMake sure I'm admin in that channel & this group with all permissions"
+       text = f"❌ Error: `{str(e)}`\n\nMᴀᴋᴇ sᴜʀᴇ I'ᴍ ᴀᴅᴍɪɴ ɪɴ ᴛʜᴀᴛ ᴄʜᴀɴɴᴇʟ & ᴛʜɪs ɢʀᴏᴜᴘ ᴡɪᴛʜ ᴀʟʟ ᴘᴇʀᴍɪssɪᴏɴs"
        return await m.edit(text)
     await update_group(message.chat.id, {"f_sub":f_sub})
-    await m.edit(f"✅ Successfully Attached ForceSub to [{chat.title}]({c_link})!", disable_web_page_preview=True)
+    await m.edit(f"✅ Sᴜᴄᴄᴇssғᴜʟʟʏ Aᴛᴛᴀᴄʜᴇᴅ FᴏʀᴄᴇSᴜʙ ᴛᴏ [{chat.title}]({c_link})!", disable_web_page_preview=True)
     text = f"#NewFsub\n\nUser: {message.from_user.mention}\nGroup: [{group.title}]({g_link})\nChannel: [{chat.title}]({c_link})"
     await bot.send_message(chat_id=LOG_CHANNEL, text=text)
 
@@ -46,21 +46,21 @@ async def nf_sub_cmd(bot, message):
     except :
        return await bot.leave_chat(message.chat.id)  
     if message.from_user.id!=user_id:
-       return await m.edit(f"Only {user_name} can use this command 😁")
+       return await m.edit(f"Only {user_name} ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ 😁")
     if bool(verified)==False:
-       return await m.edit("This chat is not verified!\nuse /verify")        
+       return await m.edit("Tʜɪs ᴄʜᴀᴛ ɪs ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ!\nᴜsᴇ /verify")        
     if bool(f_sub)==False:
-       return await m.edit("This chat is currently don't have any FSub\nuse /fsub")        
+       return await m.edit("Tʜɪs ᴄʜᴀᴛ ɪs ᴄᴜʀʀᴇɴᴛʟʏ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴʏ FSᴜʙ\nᴜsᴇ /fsub")        
     try:
        chat   = await bot.get_chat(f_sub)
        group  = await bot.get_chat(message.chat.id)
        c_link = chat.invite_link
        g_link = group.invite_link       
     except Exception as e:
-       text = f"❌ Error: `{str(e)}`\n\nMake sure I'm admin in that channel & this group with all permissions"
+       text = f"❌ Error: `{str(e)}`\n\nMᴀᴋᴇ sᴜʀᴇ I'ᴍ ᴀᴅᴍɪɴ ɪɴ ᴛʜᴀᴛ ᴄʜᴀɴɴᴇʟ & ᴛʜɪs ɢʀᴏᴜᴘ ᴡɪᴛʜ ᴀʟʟ ᴘᴇʀᴍɪssɪᴏɴs"
        return await m.edit(text)
     await update_group(message.chat.id, {"f_sub":False})
-    await m.edit(f"✅ Successfully removed FSub from [{chat.title}]({c_link})!", disable_web_page_preview=True)
+    await m.edit(f"✅ Sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴇᴍᴏᴠᴇᴅ FSᴜʙ [{chat.title}]({c_link})!", disable_web_page_preview=True)
     text = f"#RemoveFsub\n\nUser: {message.from_user.mention}\nGroup: [{group.title}]({g_link})\nChannel: [{chat.title}]({c_link})"
     await bot.send_message(chat_id=LOG_CHANNEL, text=text)
 
@@ -73,11 +73,11 @@ async def f_sub_callback(bot, update):
     admin   = group["user_id"]
 
     if update.from_user.id!=user_id:
-       return await update.answer("That's not for you 😂", show_alert=True)
+       return await update.answer("👀 Tʜᴀᴛ's ɴᴏᴛ ғᴏʀ ʏᴏᴜ 👀", show_alert=True)
     try:
        await bot.get_chat_member(f_sub, user_id)          
     except UserNotParticipant:
-       await update.answer("I like your smartness..\nBut don't be over smart 🤭", show_alert=True) # @subinps 😁
+       await update.answer("I ʟɪᴋᴇ ʏᴏᴜʀ sᴍᴀʀᴛɴᴇss..\nBᴜᴛ ᴅᴏɴ'ᴛ ʙᴇ ᴏᴠᴇʀ sᴍᴀʀᴛ 🤭", show_alert=True) # @subinps 😁
     except:       
        await bot.restrict_chat_member(chat_id=update.message.chat.id, 
                                       user_id=user_id,
