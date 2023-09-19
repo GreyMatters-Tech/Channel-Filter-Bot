@@ -25,7 +25,7 @@ async def connect(bot, message):
           return await message.reply("Tʜɪs ᴄʜᴀɴɴᴇʟ ɪs ᴀʟʀᴇᴀᴅʏ ᴄᴏɴɴᴇᴄᴛᴇᴅ! Yᴏᴜ Cᴀɴᴛ Cᴏɴɴᴇᴄᴛ Aɢᴀɪɴ")
        channels.append(channel)
     except:
-       return await m.edit("❌ Iɴᴄᴏʀʀᴇᴄᴛ ғᴏʀᴍᴀᴛ!\nᴜsᴇ `/connect Cʜᴀɴɴᴇʟ ID`")    
+       return await m.edit("❌ Iɴᴄᴏʀʀᴇᴄᴛ ғᴏʀᴍᴀᴛ!\nᴜsᴇ `/connect CʜᴀɴɴᴇʟID`")    
     try:
        chat   = await bot.get_chat(channel)
        group  = await bot.get_chat(message.chat.id)
@@ -46,7 +46,7 @@ async def connect(bot, message):
 
 @Client.on_message(filters.group & filters.command("disconnect"))
 async def disconnect(bot, message):
-    m=await message.reply("Pʟᴇᴀsᴇ ᴡᴀɪᴛ..p")   
+    m=await message.reply("Pʟᴇᴀsᴇ ᴡᴀɪᴛ..")   
     try:
        group     = await get_group(message.chat.id)
        user_id   = group["user_id"] 
@@ -62,10 +62,10 @@ async def disconnect(bot, message):
     try:
        channel = int(message.command[-1])
        if channel not in channels:
-          return await m.edit("Yᴏᴜ ᴅɪᴅɴ'ᴛ ᴀᴅᴅᴇᴅ ᴛʜɪs ᴄʜᴀɴɴᴇʟ ʏᴇᴛ Oʀ Cʜᴇᴄᴋ Cʜᴀɴɴᴇʟ Iᴅ")
+          return await m.edit("Yᴏᴜ ᴅɪᴅɴ'ᴛ ᴀᴅᴅᴇᴅ ᴛʜɪs ᴄʜᴀɴɴᴇʟ ʏᴇᴛ Oʀ Cʜᴇᴄᴋ CʜᴀɴɴᴇʟIᴅ")
        channels.remove(channel)
     except:
-       return await m.edit("❌ Iɴᴄᴏʀʀᴇᴄᴛ ғᴏʀᴍᴀᴛ!\nᴜsᴇ `/disconnect Cʜᴀɴɴᴇʟ Iᴅ`")
+       return await m.edit("❌ Iɴᴄᴏʀʀᴇᴄᴛ ғᴏʀᴍᴀᴛ!\nᴜsᴇ `/disconnect CʜᴀɴɴᴇʟIᴅ`")
     try:
        chat   = await bot.get_chat(channel)
        group  = await bot.get_chat(message.chat.id)
