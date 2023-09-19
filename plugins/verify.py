@@ -15,11 +15,11 @@ async def _verify(bot, message):
     try:       
        user = await bot.get_users(user_id)
     except:
-       return await message.reply(f"❌ {user_name} Need to start me in PM!")
+       return await message.reply(f"❌ {user_name} Nᴇᴇᴅ ᴛᴏ sᴛᴀʀᴛ ᴍᴇ ɪɴ PM!")
     if message.from_user.id != user_id:
-       return await message.reply(f"Only {user.mention} can use this command 😁")
+       return await message.reply(f"Only {user.mention} ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ 😁")
     if verified==True:
-       return await message.reply("This Group is already verified!")
+       return await message.reply("Tʜɪs Gʀᴏᴜᴘ ɪs ᴀʟʀᴇᴀᴅʏ ᴠᴇʀɪғɪᴇᴅ!")
     try:
        link = (await bot.get_chat(message.chat.id)).invite_link     
     except:
