@@ -23,7 +23,7 @@ async def _verify(bot, message):
     try:
        link = (await bot.get_chat(message.chat.id)).invite_link     
     except:
-       return message.reply("❌ Make me admin here with all permissions!")    
+       return message.reply("❌ Mᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ʜᴇʀᴇ ᴡɪᴛʜ ᴀʟʟ ᴘᴇʀᴍɪssɪᴏɴs!")    
            
     text  = f"#NewRequest\n\n"
     text += f"User: {message.from_user.mention}\n"
@@ -35,9 +35,9 @@ async def _verify(bot, message):
                            text=text,
                            disable_web_page_preview=True,
                            reply_markup=InlineKeyboardMarkup(
-                                                 [[InlineKeyboardButton("✅ Approve", callback_data=f"verify_approve_{message.chat.id}"),
-                                                   InlineKeyboardButton("❌ Decline", callback_data=f"verify_decline_{message.chat.id}")]]))
-    await message.reply("Verification Request sent ✅\nWe will notify You Personally when it is approved")
+                                                 [[InlineKeyboardButton("✅ Aᴘᴘʀᴏᴠᴇ", callback_data=f"verify_approve_{message.chat.id}"),
+                                                   InlineKeyboardButton("❌ Dᴇᴄʟɪɴᴇ", callback_data=f"verify_decline_{message.chat.id}")]]))
+    await message.reply("Vᴇʀɪғɪᴄᴀᴛɪᴏɴ Rᴇǫᴜᴇsᴛ sᴇɴᴛ ✅\nWᴇ ᴡɪʟʟ ɴᴏᴛɪғʏ Yᴏᴜ Pᴇʀsᴏɴᴀʟʟʏ ᴡʜᴇɴ ɪᴛ ɪs ᴀᴘᴘʀᴏᴠᴇᴅ")
 
 
 @Client.on_callback_query(filters.regex(r"^verify"))
@@ -48,9 +48,9 @@ async def verify_(bot, update):
     user  = group["user_id"]
     if update.data.split("_")[1]=="approve":
        await update_group(id, {"verified":True})
-       await bot.send_message(chat_id=user, text=f"Your verification request for {name} has been approved ✅")
+       await bot.send_message(chat_id=user, text=f"Yᴏᴜʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ʀᴇǫᴜᴇsᴛ ғᴏʀ {name} ʜᴀs ʙᴇᴇɴ ᴀᴘᴘʀᴏᴠᴇᴅ ✅")
        await update.message.edit(update.message.text.html.replace("#NewRequest", "#Approved"))
     else:
        await delete_group(id)
-       await bot.send_message(chat_id=user, text=f"Your verification request for {name} has been declined 😐 Please Contact Admin")
+       await bot.send_message(chat_id=user, text=f"Yᴏᴜʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ʀᴇǫᴜᴇsᴛ ғᴏʀ {name} ʜᴀs ʙᴇᴇɴ ᴅᴇᴄʟɪɴᴇᴅ 😐 Pʟᴇᴀsᴇ Cᴏɴᴛᴀᴄᴛ Aᴅᴍɪɴ")
        await update.message.edit(update.message.text.html.replace("#NewRequest", "#Declined"))
