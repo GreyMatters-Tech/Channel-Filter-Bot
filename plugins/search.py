@@ -24,7 +24,7 @@ async def inline_handlers(_, event: Message):
     if event.text == '/start':
         return
     answers = f'**Searching For "{event.text}" 🔍**'
-    async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text):
+    async for message in User.search_messages(chat_id=info.CHANNELS, limit=50, query=event.text):
         if message.text:
             thumb = None
             f_text = message.text
@@ -39,7 +39,7 @@ async def inline_handlers(_, event: Message):
         await event.delete()
         await msg.delete()
     except:
-        print(f"[{Config.BOT_SESSION_NAME}] - Failed to Answer - {event.from_user.first_name}")
+        print(f"[{info.SESSION}] - Failed to Answer - {event.from_user.first_name}")
 
 
 # Start Clients
