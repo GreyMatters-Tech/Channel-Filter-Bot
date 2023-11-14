@@ -24,7 +24,7 @@ async def inline_handlers(_, event: Message):
     if event.text == '/start':
         return
     answers = f'**Searching For "{event.text}" 🔍**'
-    async for message in User.search_messages(chat_id=info.CHANNELS, limit=50, query=event.text):
+    async for message in User.search_messages(chat_id=info.CHANNEL, limit=50, query=event.text):
         if message.text:
             thumb = None
             f_text = message.text
