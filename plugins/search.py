@@ -7,16 +7,16 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 # Bot Client for Inline Search
 Bot = Client(
     session_name=info.SESSION,
-    api_id=Config.API_ID,
-    api_hash=Config.API_HASH,
-    bot_token=Config.BOT_TOKEN
+    api_id=info.API_ID,
+    api_hash=info.API_HASH,
+    bot_token=info.BOT_TOKEN
 )
 
 # User Client for Searching in Channel.
 User = Client(
     session_name=info.SESSION,
-    api_id=Config.API_ID,
-    api_hash=Config.API_HASH
+    api_id=info.API_ID,
+    api_hash=info.API_HASH
 )
 
 @Bot.on_message(filters.incoming)
