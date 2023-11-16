@@ -3,7 +3,7 @@ from pyrogram import Client, filters, idle
 from pyrogram.errors import QueryIdInvalid
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InlineQuery, InlineQueryResultArticle, \
     InputTextMessageContent
-
+from plugins.fsub import fsub
 # Bot Client for Inline Search
 Bot = Client(
     session_name=info.SESSION,
