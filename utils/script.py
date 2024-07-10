@@ -7,7 +7,7 @@ I Will filter your channel posts automatically and send it in your group chat wh
     HELP = """To Use me In A Group
 
 - Add me in your group & channel with all permissions. 
-- Send /verify in group & wait for It To Accept Or Directly Contact To Owner After Request @GreyMatter_Bots.
+- Send /verify in group & wait for It To Accept Or Directly Contact To Owner After Request @Dreamer999.
 - After verification send /connect YourChannelID
 - Example : /connect -100xxxxxxxxxx
 - Done ✅. <b><I>Enjoy 💜❤</I></b> )
