@@ -15,8 +15,11 @@ fsub - Add a Force Subscribe Channel
 connections - Get connected channels list
 ```
 
+## Deploy 
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/PREETMEHRA73638/Channel-Filter-Bot)
+
+
 #### Credits :-
-
-[CyniteOfficial](https://github.com/cyniteofficial) - Developer
-
+[CyniteOfficial](https://github.com/cyniteofficial) - Develo
 [@GreyMatter_Bots](https://www.telegram.dog/GreyMatter_Bots) - Me For Promoting This Open Source Project.
